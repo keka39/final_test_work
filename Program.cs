@@ -11,22 +11,16 @@ Console.Clear();
 string[] array = {"hello", "2", "world", ":-)", "1234", "1567", "-2", "computer science", "Russia", "Denmark", "Kazan"};
 string[] result = new string[array.Length];
 
-    int count = 0;
-    for (int i = 0; i < array.Length; i++)
+int count = 0;
+for (int i = 0; i < array.Length; i++)
+{
+    if (array[i].Length <= 3)
     {
-        if (array[i].Length <= 3)
-        {
-            result[count++] = array[i];
-        }
+        result[count++] = array[i];
     }
+}
 
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write($"{result[i]}\t");
-    }
-
-
-
-
-
-
+for (int i = 0; i < array.Length; i++)
+{
+    Console.Write($"{result[i]}\t");
+}
